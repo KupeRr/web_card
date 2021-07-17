@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Выполненные заказы
+{% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>Выполненные заказы</h1>
+        <p>Хотелось бы вести здесь список проектов которые я выполнил</p>        
+        {% if news %}
+            {% for item in news %}
+                <div class="alert alert-warning">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.anons}}</p>
+                    <a href="{% url 'news-detail' item.id %}" class="btn btn-warning">Подробнее</a>
+                </div>
+            {% endfor %}
+
+        {% else %}
+            <p>Записей нет</p>
+        {% endif %}
+        
+    </div>
+{% endblock content %}

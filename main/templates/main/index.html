@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{title}}</h1>
+        <p>Добро пожаловать на мой первый сайт!<br>
+        Меня зовут: {{data_about.name}} {{data_about.surname}}.
+        Мне сейчас {{data_about.age}} и я активно развиваюсь в Python/Django
+        Я работаю на позиции {{data_about.pos}}
+        В свободное время работаю как {{data_about.part_pos}}
+        Возможно я буду и дальше развивать этот сайт и превращу его в свой блог...
+        И да, для меня программирование и работа, и хобби одновременно :)</p>
+    </div>
+{% endblock content %}
